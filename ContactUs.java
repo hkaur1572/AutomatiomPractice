@@ -29,12 +29,7 @@ public class ContactUs {
 	public void contactUS() {
 
 		driver.findElement(By.id("contact-link")).click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 
 		WebElement element = driver.findElement(By.id("id_contact"));
 		Select sc = new Select(element);
@@ -46,7 +41,7 @@ public class ContactUs {
 				.sendKeys("C:\\Users\\user\\eclipse-workspace\\importantPrograms\\src\\importantPrograms");
 		driver.findElement(By.id("message")).sendKeys("hlo software world ");
 		driver.findElement(By.id("submitMessage")).click();
-		
+
 	}
 
 	@AfterTest
